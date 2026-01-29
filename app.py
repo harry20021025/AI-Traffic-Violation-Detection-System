@@ -9,7 +9,7 @@ import io
 
 # For now this is local backend.
 # After deploying backend, replace with public URL.
-BACKEND_URL = "http://127.0.0.1:8000/process-image"
+BACKEND_URL = "https://traffic-backend.onrender.com/process-image"
 
 ADMIN_PASSWORD = "admin123"
 
