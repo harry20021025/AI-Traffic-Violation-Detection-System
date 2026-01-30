@@ -5,14 +5,13 @@ import os
 model = YOLO("best.pt")
 
 def detect_plate(image_path):
-    # Read image
+
     img = cv2.imread(image_path)
 
     if img is None:
         print("ERROR: Image not read:", image_path)
         return None
 
-    # Run YOLO with LOW confidence
     results = model(img, conf=0.10, iou=0.3)
 
     if len(results) == 0 or results[0].boxes is None:
@@ -25,7 +24,6 @@ def detect_plate(image_path):
         print("YOLO found 0 boxes")
         return None
 
-    # Select LARGEST box
     best_box = None
     best_area = 0
 
@@ -47,7 +45,6 @@ def detect_plate(image_path):
         print("Cropped plate is empty")
         return None
 
-    # Ensure uploads folder exists
     os.makedirs("uploads", exist_ok=True)
 
     plate_path = "uploads/plate.jpg"
