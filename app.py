@@ -3,12 +3,6 @@ import requests
 from PIL import Image
 import io
 
-# ==============================
-# CONFIG
-# ==============================
-
-# For now this is local backend.
-# After deploying backend, replace with public URL.
 BACKEND_URL = "https://traffic-backend.onrender.com/process-image"
 
 ADMIN_PASSWORD = "admin123"
@@ -21,32 +15,21 @@ VIOLATION_TYPES = [
     "No Seat Belt"
 ]
 
-# ==============================
-# STREAMLIT PAGE SETUP
-# ==============================
-
 st.set_page_config(
     page_title="AI Traffic Violation Detection",
     layout="centered"
 )
 
-# Session state
+
 if "admin_logged_in" not in st.session_state:
     st.session_state.admin_logged_in = False
 
-# ==============================
-# SIDEBAR
-# ==============================
 
 st.sidebar.title("🚦 Navigation")
 page = st.sidebar.radio(
     "Go to",
     ["Public - Violation Detection", "Admin Panel"]
 )
-
-# ==============================
-# PUBLIC PAGE
-# ==============================
 
 if page == "Public - Violation Detection":
 
@@ -135,10 +118,6 @@ if page == "Public - Violation Detection":
                     "Make sure FastAPI backend is running."
                 )
 
-# ==============================
-# ADMIN PANEL (DEMO MODE)
-# ==============================
-
 elif page == "Admin Panel":
 
     st.title("🔐 Admin Panel")
@@ -182,10 +161,6 @@ elif page == "Admin Panel":
         if st.button("Logout"):
             st.session_state.admin_logged_in = False
             st.rerun()
-
-# ==============================
-# FOOTER
-# ==============================
 
 st.markdown("---")
 st.markdown(
