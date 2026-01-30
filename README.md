@@ -19,7 +19,7 @@ Shows results in a Streamlit web app
 
 Sends automatic email notifications for violations
 
-🛠 Technologies Used
+#**Technologies Used**
 
 Python
 
