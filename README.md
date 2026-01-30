@@ -5,7 +5,7 @@ It extracts the license plate number using OCR, stores violation data in a datab
 
 The goal of this project is to demonstrate how AI can be used in smart traffic management systems.
 
-###### **What This System Does**
+### What This System Does
 
 - Detects vehicles and number plates using YOLO
 
@@ -19,7 +19,7 @@ The goal of this project is to demonstrate how AI can be used in smart traffic m
 
 - Sends automatic email notifications for violations
 
-###### **Technologies Used**
+### Technologies Used
 
 - Python
 
@@ -35,7 +35,7 @@ The goal of this project is to demonstrate how AI can be used in smart traffic m
 
 - Gemini API
 
-###### **Project Structure**
+### Project Structure
 
 AI-Traffic-Violation-Detection-System/
 
@@ -51,17 +51,17 @@ AI-Traffic-Violation-Detection-System/
 - requirements.txt     -> Python dependencies
 - README.md            -> Project documentation
 
-###### **Dataset & Model Training**
+### Dataset & Model Training
 
 This project uses an Indian Number Plate Dataset for training the YOLO model.
 
-###### **Dataset Source**
+### Dataset Source
 
 Roboflow Universe dataset:
 
 ###### **https://universe.roboflow.com/yolox-qcftu/indian-number-plate-keeo5/dataset/2**
 
-###### **Dataset Split**
+### Dataset Split
 
 - Training set: 1215 images
 
@@ -69,7 +69,7 @@ Roboflow Universe dataset:
 
 - Testing set: 59 images
 
-###### **Model Training**
+### Model Training
 
 The YOLO model was trained on the above dataset
 
@@ -79,7 +79,7 @@ best.pt
 
 This model is used for number plate detection in the system.
 
-###### **How to Run the Project**
+### How to Run the Project
 
 1️⃣ Install dependencies
 pip install -r requirements.txt
@@ -96,7 +96,7 @@ uvicorn main:app --reload
 4️⃣ Start frontend
 streamlit run app.py
 
-###### **Output**
+### Output
 
 - Vehicle detection
 
@@ -106,7 +106,7 @@ streamlit run app.py
 
 - Automated email alerts
 
-###### **Why I Built This**
+### Why I Built This
 
 This project was built to practice:
 
@@ -118,7 +118,7 @@ This project was built to practice:
 
 - Real-world AI systems
 
-###### **Future Improvements**
+### Future Improvements
 
 - Real-time CCTV video processing
 
@@ -130,7 +130,7 @@ This project was built to practice:
 
 - Detection of more traffic violations
 
- ###### **Author**
+ ### Author
 
 Hariom Dixit
 
