@@ -39,17 +39,17 @@ The goal of this project is to demonstrate how AI can be used in smart traffic m
 
 AI-Traffic-Violation-Detection-System/
 
-app.py               -> Streamlit frontend
-main.py              -> FastAPI backend
-yolo_detect.py       -> YOLO detection logic
-ocr.py               -> OCR processing
-db.py                -> Database connection
-email_sender.py      -> Email sending logic
-gemini_ai.py         -> Gemini API integration
-database(sql).sql   -> MySQL database structure
-best.pt              -> Trained YOLO model
-requirements.txt     -> Python dependencies
-README.md            -> Project documentation
+- app.py               -> Streamlit frontend
+- main.py              -> FastAPI backend
+- yolo_detect.py       -> YOLO detection logic
+- ocr.py               -> OCR processing
+- db.py                -> Database connection
+- email_sender.py      -> Email sending logic
+- gemini_ai.py         -> Gemini API integration
+- database(sql).sql   -> MySQL database structure
+- best.pt              -> Trained YOLO model
+- requirements.txt     -> Python dependencies
+- README.md            -> Project documentation
 
 ###### **Dataset & Model Training**
 
