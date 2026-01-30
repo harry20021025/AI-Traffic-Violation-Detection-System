@@ -1,142 +1,137 @@
-##### **AI Traffic Violation Detection System**
+###### **AI Traffic Violation Detection System**
 
+This project is an AI-based traffic monitoring system that detects vehicles and number plates using computer vision.
+It extracts the license plate number using OCR, stores violation data in a database, and sends automated email alerts.
 
-
-This project is an AI-based traffic monitoring system that detects
-
-vehicles and number plates using computer vision. It extracts the
-
-license plate number using OCR, stores violation data in a database, and
-
-sends automated email alerts.
-
-
-
-The goal of this project is to demonstrate how AI can be used in smart
-
-traffic management systems.
-
-
+The goal of this project is to demonstrate how AI can be used in smart traffic management systems.
 
 ###### **What This System Does**
 
+Detects vehicles and number plates using YOLO
 
+Extracts number plate text using OCR
 
-\-   Detects vehicles and number plates using YOLO
+Stores records in MySQL database
 
-\-   Extracts number plate text using OCR
+Provides backend APIs using FastAPI
 
-\-   Stores records in MySQL database
+Shows results in a Streamlit web app
 
-\-   Provides backend APIs using FastAPI
+Sends automatic email notifications for violations
 
-\-   Shows results in a Streamlit web app
+🛠 Technologies Used
 
-\-   Sends automatic email notifications for violations
+Python
 
+YOLOv8
 
+EasyOCR
 
-###### **Technologies Used**
+FastAPI
 
+Streamlit
 
+MySQL
 
-* Python
-* YOLOv8
-* EasyOCR
-* FastAPI
-* Streamlit
-* MySQL
-* Gemini API
+Gemini API
 
-
-
-###### **Project Structure**
-
-
-
+📁 Project Structure
 AI-Traffic-Violation-Detection-System/
 
+app.py               -> Streamlit frontend
+main.py              -> FastAPI backend
+yolo_detect.py       -> YOLO detection logic
+ocr.py               -> OCR processing
+db.py                -> Database connection
+email_sender.py      -> Email sending logic
+gemini_ai.py         -> Gemini API integration
+database(sql).sql   -> MySQL database structure
+best.pt              -> Trained YOLO model
+requirements.txt     -> Python dependencies
+README.md            -> Project documentation
+
+📊 Dataset & Model Training
+
+This project uses an Indian Number Plate Dataset for training the YOLO model.
+
+📁 Dataset Source
+
+Roboflow Universe dataset:
+
+🔗 https://universe.roboflow.com/yolox-qcftu/indian-number-plate-keeo5/dataset/2
+
+📈 Dataset Split
+
+Training set: 1215 images
+
+Validation set: 78 images
+
+Testing set: 59 images
+
+🤖 Model Training
+
+The YOLO model was trained on the above dataset
+
+Best trained model saved as:
+
+best.pt
 
 
-app.py              -> Streamlit frontend
+This model is used for number plate detection in the system.
 
-main.py             -> FastAPI backend
+⚙️ How to Run the Project
+1️⃣ Install dependencies
+pip install -r requirements.txt
 
-yolo\_detect.py      -> YOLO detection logic
+2️⃣ Setup database
 
-ocr.py              -> OCR processing
+Import database(sql).sql into MySQL
 
-db.py               -> Database connection
+Update database credentials in db.py
 
-email\_sender.py     -> Email sending logic
+3️⃣ Start backend
+uvicorn main:app --reload
 
-gemini\_ai.py        -> Gemini API integration
+4️⃣ Start frontend
+streamlit run app.py
 
-database(sql).sql  -> MySQL database structure
+📊 Output
 
-best.pt             -> Trained YOLO model
+Vehicle detection
 
-requirements.txt    -> Python dependencies
+Plate recognition
 
-README.md           -> Project documentation
+Violation record storage
 
+Automated email alerts
 
+🎯 Why I Built This
 
+This project was built to practice:
 
+Computer vision
 
-###### **How to Run**
+Backend API development
 
+Database integration
 
+Real-world AI systems
 
-1\.  Install dependencies: pip install -r requirements.txt
+🚀 Future Improvements
 
+Real-time CCTV video processing
 
+Improved OCR accuracy
 
-2\.  Setup database: Import database(sql).sql into MySQL Update
+Cloud deployment
 
-    credentials in db.py
+Mobile app integration
 
+Detection of more traffic violations
 
+👨‍💻 Author
 
-3\.  Start backend: uvicorn main:app –reload
-
-
-
-4\.  Start frontend: streamlit run app.py
-
-
-
-###### **Output**
-
-
-
-Vehicle detection Plate recognition Database storage Email alerts
-
-
-
-###### **Why I Built This**
-
-
-
-To practice computer vision, backend development, database integration
-
-and real-world AI systems.
-
-
-
-###### **Future Improvements**
-
-
-
-* Real-time CCTV video processing
-* Improved OCR accuracy
-* Cloud deployment
-* Mobile app integration
-* Detection of more traffic violations
-
-
-
-###### **Author Hariom Dixit**
+Hariom Dixit
 
 
 
