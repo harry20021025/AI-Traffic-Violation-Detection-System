@@ -4,7 +4,6 @@ from gemini_ai import generate_penalty_email
 from dotenv import load_dotenv
 import os
 
-# Load .env file
 load_dotenv()
 
 EMAIL_USER = os.getenv("EMAIL_USER")
@@ -13,7 +12,7 @@ EMAIL_PASS = os.getenv("EMAIL_PASS")
 
 def send_email(to_email, owner_name, vehicle_no, fine, violation_type):
     try:
-        print("📧 Generating email using Gemini...")
+        print("Generating email using Gemini...")
 
         email_body = generate_penalty_email(
             owner_name,
@@ -22,10 +21,10 @@ def send_email(to_email, owner_name, vehicle_no, fine, violation_type):
             fine
         )
 
-        print("✅ Gemini email generated")
+        print("Gemini email generated")
 
     except Exception as e:
-        print("⚠️ Gemini unavailable, using fallback:", e)
+        print("Gemini unavailable, using fallback:", e)
 
         email_body = f"""
 Dear {owner_name},
@@ -55,4 +54,4 @@ Traffic Police Department
         server.login(EMAIL_USER, EMAIL_PASS)
         server.send_message(msg)
 
-    print("📨 Email sent successfully")
+    print("Email sent successfully")
