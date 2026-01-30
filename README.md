@@ -63,11 +63,11 @@ Roboflow Universe dataset:
 
 ###### **Dataset Split**
 
-Training set: 1215 images
+- Training set: 1215 images
 
-Validation set: 78 images
+- Validation set: 78 images
 
-Testing set: 59 images
+- Testing set: 59 images
 
 ###### **Model Training**
 
@@ -86,9 +86,9 @@ pip install -r requirements.txt
 
 2️⃣ Setup database
 
-Import database(sql).sql into MySQL
+- Import database(sql).sql into MySQL
 
-Update database credentials in db.py
+- Update database credentials in db.py
 
 3️⃣ Start backend
 uvicorn main:app --reload
@@ -98,13 +98,13 @@ streamlit run app.py
 
 ###### **Output**
 
-Vehicle detection
+- Vehicle detection
 
-Plate recognition
+- Plate recognition
 
-Violation record storage
+- Violation record storage
 
-Automated email alerts
+- Automated email alerts
 
 ###### **Why I Built This**
 
