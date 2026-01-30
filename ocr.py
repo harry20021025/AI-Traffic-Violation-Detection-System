@@ -4,13 +4,11 @@ import re
 import os
 from collections import defaultdict
 
-# Initialize OCR once
 reader = easyocr.Reader(['en'], gpu=False)
 
 # Indian number plate regex
 INDIAN_PLATE_REGEX = re.compile(r'^[A-Z]{2}\d{2}[A-Z]{1,2}\d{4}$')
 
-# Common OCR mistakes
 CHAR_MAP = {
     'O': '0', 'Q': '0', 'D': '0',
     'I': '1', 'L': '1',
@@ -23,9 +21,6 @@ VALID_STATES = [
     "WB","OD","AP","TS","KL","CG","JH","UK","HP","JK","AS"
 ]
 
-# =========================
-# Correction helpers
-# =========================
 
 def smart_correct(text):
     return "".join(CHAR_MAP.get(c, c) for c in text)
@@ -50,9 +45,6 @@ def clean_double_letters(text):
         return text[1:]
     return text
 
-# =========================
-# Preprocessing
-# =========================
 
 def preprocess_variants(img):
 
@@ -81,9 +73,6 @@ def preprocess_variants(img):
 
     return variants
 
-# =========================
-# OCR MAIN FUNCTION
-# =========================
 
 def extract_number(plate_path, debug=False):
 
@@ -128,9 +117,6 @@ def extract_number(plate_path, debug=False):
             if INDIAN_PLATE_REGEX.match(plate):
                 plate_scores[plate].append(conf)
 
-    # ======================
-    # Majority voting
-    # ======================
 
     best_plate = None
     best_votes = 0
