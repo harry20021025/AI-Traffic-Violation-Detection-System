@@ -130,7 +130,7 @@ This project was built to practice:
 
 - Detection of more traffic violations
 
- ###### **Author Hariom Dixit**
+ ###### **Author**
 
 Hariom Dixit
 
